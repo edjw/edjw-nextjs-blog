@@ -1,20 +1,45 @@
-import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import PostList from '../components/PostList'
 
+import getPosts from '../utils/getPosts'
 
-export default function Home() {
+const Index = ({ posts, title, description, ...props }) => {
   return (
-    <div>
-      <Head>
-        <title>Trying out NextJS for a blog</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Layout pageTitle={title} description={description}>
+        <Link href='pocket-articles'><a>Pocket articles</a></Link>
+        <main>
+          <PostList posts={posts} />
+        </main>
+        <p>
+          You can look at the repository for this project{' '}
+          <a href="https://github.com/cassidoo/next-netlify-blog-starter">
+            here
+          </a>
+          , and a tutorial on how to build it {` `}
+          <a href="https://url.netlify.com/ByVW0bCF8">here</a>.
+        </p>
+      </Layout>
 
-      <main>
-        <h1 className="text-4xl">
-          Trying out Next for a blog
-                  </h1>
-
-      </main>
-    </div>
+    </>
   )
+}
+
+export default Index
+
+export async function getStaticProps() {
+  const configData = await import(`../siteconfig.json`)
+
+  const posts = ((context) => {
+    return getPosts(context)
+  })(require.context('../posts', true, /\.md$/))
+
+  return {
+    props: {
+      posts,
+      title: configData.default.title,
+      description: configData.default.description,
+    },
+  }
 }

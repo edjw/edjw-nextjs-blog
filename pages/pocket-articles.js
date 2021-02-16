@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import has from "lodash/has"
 import map from "lodash/map"
 
@@ -12,9 +11,10 @@ function getTagName(tag) {
 export async function getStaticProps(context) {
     const pocketLinks = await fetch(`https://getpocket.com/v3/get?consumer_key=${process.env.POCKET_API_KEY}&access_token=${process.env.POCKET_ACCESS_TOKEN}&sort=newest&detailType=complete`); const pocketLinksJSON = await pocketLinks.json();
 
-    let data = Object.values(pocketLinksJSON.list).reduce((accumulator, item) => {
+    // Reduce instead of .filter().map()
+    let data = Object.values(pocketLinksJSON.list).reduce((allItems, item) => {
         if (!(has(item.tags, "private"))) {
-            accumulator.push({
+            allItems.push({
                 id: item.item_id,
                 title: item.resolved_title ? item.resolved_title : null,
                 url: item.resolved_url,
@@ -23,7 +23,7 @@ export async function getStaticProps(context) {
                 authors: item.authors ? map(item.authors, getAuthorName) : null
             })
         }
-        return accumulator
+        return allItems
     }, []).reverse();
 
     if (!data) {
@@ -79,8 +79,7 @@ function Pocket({ data }) {
                         <a
                             href={`https://app.getpocket.com/read/${id}`}
                             aria-label={`Read ${title ? title : 'article'}${authors
-                                ? ' by '
-                                : ''} ${authors ? authors : ''} on Pocket`}>Pocket article link
+                                && ' by '} ${authors && authors} on Pocket`}>Pocket article link
       </a>
                     </p>
 
@@ -96,7 +95,7 @@ function Pocket({ data }) {
 
                         {tags &&
                             tags.map((tag, index) => (
-                                <span key={index}>{tag}{index != tags.length - 1 ? ", " : ""}</span>
+                                <span key={index}>{tag}{index != tags.length - 1 && ", "}</span>
                             ))
                         }
 
