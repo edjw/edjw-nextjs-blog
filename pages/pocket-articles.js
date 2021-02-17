@@ -9,16 +9,17 @@ function getTagName(tag) {
 }
 
 export async function getStaticProps(context) {
-    const pocketLinks = await fetch(`https://getpocket.com/v3/get?consumer_key=${process.env.POCKET_API_KEY}&access_token=${process.env.POCKET_ACCESS_TOKEN}&sort=newest&detailType=complete`); const pocketLinksJSON = await pocketLinks.json();
+    const pocketLinks = await fetch(`https://getpocket.com/v3/get?consumer_key=${process.env.POCKET_API_KEY}&access_token=${process.env.POCKET_ACCESS_TOKEN}&sort=newest&detailType=complete`);
+    const pocketLinksJSON = await pocketLinks.json();
 
     // Reduce instead of .filter().map()
     let data = Object.values(pocketLinksJSON.list).reduce((allItems, item) => {
         if (!(has(item.tags, "private"))) {
             allItems.push({
                 id: item.item_id,
-                title: item.resolved_title ? item.resolved_title : null,
+                title: item.resolved_title || null,
                 url: item.resolved_url,
-                excerpt: item.excerpt ? item.excerpt : null,
+                excerpt: item.excerpt || null,
                 tags: item.tags ? map(item.tags, getTagName) : null,
                 authors: item.authors ? map(item.authors, getAuthorName) : null
             })
@@ -34,7 +35,10 @@ export async function getStaticProps(context) {
 
 
     return {
-        props: { data }, // will be passed to the page component as props
+        props: {
+            data
+        }, // will be passed to the page component as props
+        revalidate: 1,
     }
 }
 

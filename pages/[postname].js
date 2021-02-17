@@ -49,10 +49,12 @@ export async function getStaticProps({ ...context }) {
             siteTitle: config.title,
             title: postData.data.title,
             date: new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(postData.data.date),
-            socialDescription: postData.data.socialDescription,
-            tags: postData.data.tags,
+            socialDescription: postData.data.socialDescription || '',
+            tags: postData.data.tags || '',
             markdownBody: await markdownToHtml(postData.content),
         },
+        revalidate: 1
+
     }
 }
 

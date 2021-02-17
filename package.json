@@ -25,5 +25,8 @@
     "remark-footnotes": "^3.0.0",
     "remark-html": "^13.0.1",
     "tailwindcss": "^2.0.3"
+  },
+  "devDependencies": {
+    "encoding": "^0.1.13"
   }
 }
