@@ -6,6 +6,7 @@ tags:
   - new website
   - svelte
   - writing
+featured: true
 ---
 Do you ever find yourself writing a first draft of something but you keep getting bogged down by making little edits?
 

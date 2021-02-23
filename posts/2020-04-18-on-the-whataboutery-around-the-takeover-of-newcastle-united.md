@@ -6,6 +6,7 @@ socialDescription: Let's not try to make ourselves feel better about Saudi
 tags:
   - politics
   - sport
+featured: true
 ---
 Saudi Arabia wants to buy 80% of Newcastle United Football Club to make itself look good.
 

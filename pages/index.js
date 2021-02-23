@@ -4,22 +4,35 @@ import PostList from '../components/PostList'
 
 import getPosts from '../utils/getPosts'
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ featuredPosts, title, description, ...props }) => {
+
   return (
     <>
       <Layout pageTitle={title} description={description}>
-        <Link href='pocket-articles'><a>Pocket articles</a></Link>
-        <main>
-          <PostList posts={posts} />
-        </main>
-        <p>
-          You can look at the repository for this project{' '}
-          <a href="https://github.com/cassidoo/next-netlify-blog-starter">
-            here
-          </a>
-          , and a tutorial on how to build it {` `}
-          <a href="https://url.netlify.com/ByVW0bCF8">here</a>.
-        </p>
+
+        <section>
+          <p>
+            My personal site
+          </p>
+
+          <p className="mt-2">
+            Some tech, some politics, some shapenote music
+          </p>
+        </section>
+
+
+        <div className="mt-8 prose">
+          <h2 className="-mb-2">A few posts I like</h2>
+
+          <PostList posts={featuredPosts} />
+
+          <p>
+            <Link href="/all-posts">
+              <a className="font-semibold">See all posts</a>
+            </Link>
+          </p>
+        </div>
+
       </Layout>
 
     </>
@@ -29,17 +42,20 @@ const Index = ({ posts, title, description, ...props }) => {
 export default Index
 
 export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
 
-  const posts = ((context) => {
+  const allPosts = ((context) => {
     return getPosts(context)
-  })(require.context('../posts', true, /\.md$/))
+  })
+    // directory, recursive?, extension to look for
+    (require.context('../posts', false, /\.md$/))
+
+
+  const featuredPosts = allPosts.filter((post) => post.featured === true)
+
 
   return {
     props: {
-      posts,
-      title: configData.default.title,
-      description: configData.default.description,
+      featuredPosts
     },
   }
 }
