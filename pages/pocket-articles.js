@@ -7,17 +7,17 @@ const numberOfArticles = 0 // 0 is unlimited
 const title = 'Pocket articles'
 const description = 'My saved Pocket articles'
 
-export default function Pocket({ title, description }) {
+export default function Pocket() {
 
-    const { data: pocketData } = useQuery(['pocketData', numberOfArticles], () => fetchPocketData(numberOfArticles), { staleTime: Infinity })
+    const { data: pocketData } = useQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles), { staleTime: Infinity })
 
     return (
         <>
             <Layout pageTitle={title} description={description}>
-
+                <h2>{title}</h2>
                 <p>
-                    This is a list of the {data.length} {' '}
-                    {data.length > 50 ?
+                    This is a list of the {pocketData.length} {' '}
+                    {pocketData.length > 50 ?
                         <a
                             href="https://github.com/edjw/edjw-blog/blob/a528443b33ce24de27097d6f1e9ac74ed817e851/_includes/layouts/reading-list.njk#L7-L11">(🤦‍♂️‍‍‍‍)</a> : ""}{' '}
 
@@ -27,7 +27,7 @@ export default function Pocket({ title, description }) {
   got a Pocket account.
             </p>
 
-                {data.map(({ title, url, authors, excerpt, id, tags }) => (
+                {pocketData.map(({ title, url, authors, excerpt, id, tags }) => (
 
                     <section key={id} className="mt-4 border-t-2 border-yellow-200">
                         <p>
@@ -86,7 +86,7 @@ export default function Pocket({ title, description }) {
 export async function getStaticProps() {
     const queryClient = new QueryClient()
 
-    await queryClient.prefetchQuery(['pocketData', numberOfArticles], () => fetchPocketData(numberOfArticles))
+    await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
 
     return {
         props: {
