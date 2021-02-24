@@ -1,4 +1,4 @@
-export default function ReadingListEntry({ url, title, excerpt = false, publication = false }: { url: string, title: string, excerpt: string | boolean, publication: string | boolean }) {
+export default function ReadingListEntry({ url, title, excerpt = false, publication = false }: { url: string, title: string, excerpt?: string | boolean, publication?: string | boolean }) {
 
     return (
         <>
