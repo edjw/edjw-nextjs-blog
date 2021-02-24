@@ -9,7 +9,7 @@ const description = 'My saved Pocket articles'
 
 export default function Pocket({ title, description }) {
 
-    const { data } = useQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
+    const { data: pocketData } = useQuery(['pocketData', numberOfArticles], () => fetchPocketData(numberOfArticles), { staleTime: Infinity })
 
     return (
         <>
@@ -86,7 +86,7 @@ export default function Pocket({ title, description }) {
 export async function getStaticProps() {
     const queryClient = new QueryClient()
 
-    await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
+    await queryClient.prefetchQuery(['pocketData', numberOfArticles], () => fetchPocketData(numberOfArticles))
 
     return {
         props: {
