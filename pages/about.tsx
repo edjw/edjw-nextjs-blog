@@ -2,8 +2,9 @@ import Layout from '../components/Layout'
 
 import getPage from '../utils/getPage'
 import pageMarkdown from '../static-pages/about.md'
+import { GetStaticProps } from 'next'
 
-const About = ({ title, description, content, ...props }) => {
+export default function About({ title, description, content, ...props }) {
     return (
         <>
             <Layout pageTitle={title} description={description}>
@@ -19,10 +20,7 @@ const About = ({ title, description, content, ...props }) => {
     )
 }
 
-export default About
-
-export async function getStaticProps() {
-
+export const getStaticProps: GetStaticProps = async (context) => {
     const page = await getPage(pageMarkdown)
     return {
         props: {

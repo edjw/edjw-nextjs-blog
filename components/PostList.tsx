@@ -2,14 +2,14 @@ import { useRef } from 'react'
 import PostEntry from './PostEntry'
 import getYear from '../utils/getYear'
 
-export default function PostList({ posts, showYears }) {
+export default function PostList({ posts, showYears = true }) {
     let year = useRef('')
     let postYear = useRef('')
 
-    function setPostYear(date) {
+    function setPostYear(date: String): void {
         postYear.current = getYear(date)
     }
-    function setYear(date) {
+    function setYear(date: String): void {
         year.current = getYear(date)
     }
 

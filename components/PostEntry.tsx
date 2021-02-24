@@ -1,6 +1,11 @@
 import Link from 'next/link'
 
-export default function PostEntry({ post }) {
+type postType = {
+    date: string;
+    title: string;
+    slug: string
+};
+export default function PostEntry({ post }: { post: postType }) {
     const { date, title, slug } = post
     return (
         <>

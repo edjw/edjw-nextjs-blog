@@ -4,8 +4,8 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { Hydrate } from 'react-query/hydration'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-function MyApp({ Component, pageProps }) {
-  const queryClientRef = useRef()
+export default function MyApp({ Component, pageProps }) {
+  const queryClientRef = useRef(null);
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient()
   }
@@ -19,5 +19,3 @@ function MyApp({ Component, pageProps }) {
 
   )
 }
-
-export default MyApp

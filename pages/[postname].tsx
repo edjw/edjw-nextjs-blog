@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import getSlugs from '../utils/getSlugs'
 import markdownToHtml from '../utils/md2HTML'
 
+import { GetStaticProps, GetStaticPaths } from 'next'
+
 export default function BlogPost({ title, date, tags, socialDescription, markdownBody }) {
     if (!title) return <></>
 
@@ -74,7 +76,7 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
     )
 }
 
-export async function getStaticProps({ ...context }) {
+export const getStaticProps: GetStaticProps = async (context) => {
     const { postname } = context.params
 
     const content = await import(`../posts/${postname}.md`)
@@ -92,7 +94,7 @@ export async function getStaticProps({ ...context }) {
     }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const blogSlugs = ((context) => {
         return getSlugs(context)
     })

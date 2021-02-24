@@ -1,10 +1,16 @@
 import Link from 'next/link'
+import { GetStaticProps } from 'next'
+
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 
 import getPosts from '../utils/getPosts'
 
-const Index = ({ featuredPosts, title, description, ...props }) => {
+// export const config = {
+//   unstable_runtimeJS: false
+// }
+
+export default function Index({ featuredPosts, title, description, ...props }) {
 
   return (
     <>
@@ -13,22 +19,22 @@ const Index = ({ featuredPosts, title, description, ...props }) => {
         <section>
           <p>
             My personal site
-          </p>
+        </p>
 
           <p className="mt-2">
             Some tech, some politics, some shapenote music
-          </p>
+            </p>
         </section>
 
 
-        <div className="mt-8 prose">
-          <h2 className="-mb-2">A few posts I like</h2>
+        <div className="mt-8 prose" >
+          <h2 className="-mb-2" >A few posts I like</h2>
 
-          <PostList posts={featuredPosts} />
+          <PostList posts={featuredPosts} showYears={false} />
 
           <p>
-            <Link href="/all-posts">
-              <a className="font-semibold">See all posts</a>
+            <Link href="/all-posts" >
+              <a className="font-semibold"> See all posts </a>
             </Link>
           </p>
         </div>
@@ -39,9 +45,7 @@ const Index = ({ featuredPosts, title, description, ...props }) => {
   )
 }
 
-export default Index
-
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
 
   const allPosts = ((context) => {
     return getPosts(context)
@@ -59,3 +63,4 @@ export async function getStaticProps() {
     },
   }
 }
+

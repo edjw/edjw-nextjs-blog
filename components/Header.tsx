@@ -10,7 +10,7 @@ export default function Header({ title, currentPath }) {
                         <Link href="/">
                             <a className="text-4xl leading-relaxed no-underline border-b-8 border-yellow-200 hover:border-transparent h-card" rel="me"
 
-                            // {currentPath === "/" && (`aria-current="page"`)}
+                            // {(currentPath === "/") && 'aria-current="page"}
 
 
                             >
@@ -25,7 +25,8 @@ export default function Header({ title, currentPath }) {
 
                 </div>
 
-                <Navigation></Navigation>
+                <Navigation />
+
             </header>
 
         </>

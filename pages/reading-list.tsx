@@ -3,6 +3,7 @@ import { dehydrate } from 'react-query/hydration'
 import { fetchPocketData } from '../data/fetchPocketQuery'
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import { GetStaticProps } from 'next'
 import ReadingListEntry from '../components/ReadingListEntry'
 
 const numberOfArticles = 3
@@ -63,7 +64,7 @@ export default function ReadingList() {
     )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
     const queryClient = new QueryClient()
 
     await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))

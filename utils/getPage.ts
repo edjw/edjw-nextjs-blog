@@ -1,5 +1,5 @@
 import matter from 'gray-matter'
-import markdownToHtml from '../utils/md2HTML'
+import markdownToHtml from './md2HTML'
 
 const getPage = async (page) => {
 

@@ -1,6 +1,11 @@
 import Link from 'next/link'
 
-export default function Footer({ repository, RSSFeed, sitemap, contentLicence }) {
+type contentLicence = {
+    link: string,
+    text: string,
+};
+
+export default function Footer({ repository, RSSFeed, sitemap, contentLicence }: { repository: String, RSSFeed: Boolean, sitemap: Boolean, contentLicence: contentLicence }) {
     return (
 
         <footer className="mt-16 prose border-t-8 border-yellow-200 dark:prose-light">

@@ -1,8 +1,9 @@
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 import getPosts from '../utils/getPosts'
+import { GetStaticProps } from 'next'
 
-const AllPosts = ({ allPosts, ...props }) => {
+export default function AllPosts({ allPosts, ...props }) {
     return (
         <>
             <Layout pageTitle='All posts' description="Ed Johnson-Williams' blogposts">
@@ -17,10 +18,8 @@ const AllPosts = ({ allPosts, ...props }) => {
     )
 }
 
-export default AllPosts
 
-export async function getStaticProps() {
-
+export const getStaticProps: GetStaticProps = async (context) => {
     const allPosts = ((context) => {
         return getPosts(context)
     })

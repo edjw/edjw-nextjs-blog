@@ -2,6 +2,7 @@ import { QueryClient, useQuery } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 import { fetchPocketData } from '../data/fetchPocketQuery'
 import Layout from '../components/Layout'
+import { GetStaticProps } from 'next'
 
 const numberOfArticles = 0 // 0 is unlimited
 const title = 'Pocket articles'
@@ -9,7 +10,9 @@ const description = 'My saved Pocket articles'
 
 export default function Pocket() {
 
-    const { data: pocketData } = useQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles), { staleTime: Infinity })
+    const { data: pocketData } = useQuery(
+        ['pocketData', numberOfArticles],
+        (numberOfArticles) => fetchPocketData(numberOfArticles), { staleTime: Infinity })
 
     return (
         <>
@@ -83,7 +86,7 @@ export default function Pocket() {
 
     )
 }
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
     const queryClient = new QueryClient()
 
     await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
