@@ -22,7 +22,8 @@
     "next-env.d.ts",
     "globals.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "data/fetchPocketQuery.js"
   ],
   "exclude": [
     "node_modules"
