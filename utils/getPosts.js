@@ -14,10 +14,11 @@ const getPosts = (context) => {
         const value = values[index]
         const postData = matter(value.default)
 
-        const postDate = new Date(postData.data.data)
+
+
         return {
             title: postData.data.title,
-            date: dateTimeFormat.format(postDate),
+            date: dateTimeFormat.format(postData.data.date),
             markdownBody: postData.content,
             featured: postData.data.featured || false,
             slug,

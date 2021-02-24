@@ -6,8 +6,8 @@ const AllPosts = ({ allPosts, ...props }) => {
     return (
         <>
             <Layout pageTitle='All posts' description="Ed Johnson-Williams' blogposts">
-                <div class="prose dark:prose-light">
-                    <h2 class="-mb-4">All blogposts</h2>
+                <div className="prose dark:prose-light">
+                    <h2 className="-mb-4">All blogposts</h2>
                     <PostList posts={allPosts} showYears={true} />
                 </div>
 
