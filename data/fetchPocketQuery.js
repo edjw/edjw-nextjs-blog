@@ -5,12 +5,11 @@ import { useQuery } from 'react-query'
 
 // TODO: fix types on here
 
-type pocketItemType = {
-    id: string,
-    title: string,
-    url: string,
-};
-
+// type pocketItemType = {
+//     id: string,
+//     title: string,
+//     url: string,
+// };
 
 function getAuthorName(author) {
     return author.name || null;
