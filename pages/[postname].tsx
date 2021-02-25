@@ -1,5 +1,7 @@
-import Link from 'next/link'
+import { titleCase } from "title-case";
+import slugify from 'slugify'
 import matter from 'gray-matter'
+import Link from 'next/link'
 
 import Layout from '../components/Layout'
 import getSlugs from '../utils/getSlugs'
@@ -13,12 +15,7 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
     return (
         <>
             <Layout pageTitle={title} description={socialDescription}>
-                {/* <div className="back">
-                    ←{' '}
-                    <Link href="/">
-                        <a>Back to post list</a>
-                    </Link>
-                </div> */}
+
                 <article className="prose h-entry dark:prose-light">
 
                     {/* <!-- h-entry things --> */}
@@ -52,8 +49,8 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
                                 <span>Tagged as:</span>{' '}
 
                                 {tags.map((tag, index) => (
-                                    <Link href={`tags/${tag}`} key={index}>
-                                        <a className=''>{tag}</a>
+                                    <Link href={`tags/${slugify(tag)}`} key={index}>
+                                        <a>{titleCase(tag)}</a>
                                     </Link>
                                 ))}
 

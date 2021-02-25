@@ -22,7 +22,7 @@ export default function Tags({ tags, ...props }) {
                     <ul>
                         {tags.map((tag) => (
                             <li key={tag.slug} className='mt-4'>
-                                <Link href={tag.slug}>
+                                <Link href={`/tags/${tag.slug}`}>
                                     <a>
                                         {tag.tag}
                                     </a>
