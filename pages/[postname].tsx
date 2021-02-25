@@ -89,8 +89,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
             socialDescription: postData.data.socialDescription || '',
             tags: postData.data.tags || '',
             markdownBody: await markdownToHtml(postData.content),
-        },
-        revalidate: 1,
+        }
     }
 }
 

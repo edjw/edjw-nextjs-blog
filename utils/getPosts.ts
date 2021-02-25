@@ -17,6 +17,7 @@ const getPosts = (context) => {
             date: dateTimeFormat.format(postData.data.date),
             markdownBody: postData.content,
             featured: postData.data.featured || false,
+            tags: postData.data.tags || null,
             slug,
         }
     }).reverse()

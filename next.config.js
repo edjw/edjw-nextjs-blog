@@ -27,11 +27,10 @@ module.exports = {
                         key: 'Referrer-Policy',
                         value: 'same-origin',
                     },
-                    {
-                        key: 'Content-Security-Policy',
-                        value: `default-src 'none'; connect-src 'self' https://vitals.vercel-insights.com; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'`,
-
-                    },
+                    // {
+                    //     key: 'Content-Security-Policy',
+                    //     value: `default-src 'none'; connect-src 'self' https://vitals.vercel-insights.com; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'`,
+                    // },
 
                 ],
             },

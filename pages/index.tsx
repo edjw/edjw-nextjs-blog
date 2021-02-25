@@ -6,10 +6,6 @@ import PostList from '../components/PostList'
 
 import getPosts from '../utils/getPosts'
 
-// export const config = {
-//   unstable_runtimeJS: false
-// }
-
 export default function Index({ featuredPosts, title, description, ...props }) {
 
   return (
