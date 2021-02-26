@@ -4,7 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import { useRouter } from 'next/router'
 
-const { title: siteTitle, description, url, author: { twitterUsername }, repository, RSSFeed, sitemap, contentLicence } = siteData
+const { title: siteTitle, url, author: { twitterUsername }, repository, RSSFeed, sitemap, contentLicence } = siteData
 
 export default function Layout({ children, pageTitle, description, ...props }) {
     const router = useRouter()
