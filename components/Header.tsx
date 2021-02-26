@@ -21,7 +21,7 @@ export default function Header({ title, currentPath }) {
 
                     </h1>
 
-                    <button id="themeButton" className="w-6 h-6 mt-2.5 dark:text-white"></button>
+                    <button id="themeButton" className="w-6 h-6 mt-2.5 dark:text-white" aria-label='Toggle theme'></button>
 
                 </div>
 
