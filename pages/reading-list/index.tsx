@@ -1,6 +1,8 @@
 import { QueryClient, useQuery } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
 import { fetchPocketData } from '../../data/fetchPocketQuery'
+import { fetchRaindropData } from '../../data/fetchRaindropQuery'
+import { fetchFeedbinData } from '../../data/fetchFeedbinQuery'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 import { GetStaticProps } from 'next'
@@ -13,6 +15,18 @@ const description = 'My saved Pocket articles, Raindrop links, and Feedbin stars
 export default function ReadingList() {
 
     const { data: pocketData } = useQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles), { staleTime: Infinity })
+
+    const { data: raindropData } = useQuery(
+        'raindropData',
+        () => fetchRaindropData(), { staleTime: Infinity })
+
+    const { data: feedbinData } = useQuery(
+        'feedbinData',
+        () => fetchFeedbinData(), { staleTime: Infinity })
+
+    const latestRaindropData = raindropData.slice(0, 3)
+    const latestFeedbinData = feedbinData.slice(0, 3)
+
     return (
         <>
             <Layout pageTitle={title} description={description}>
@@ -40,10 +54,12 @@ export default function ReadingList() {
                     Latest 3 Raindrop links
                 </h3>
 
-                {/* <ReadingListEntry></ReadingListEntry> */}
+                {latestRaindropData.map(({ title, excerpt, url }, index) => (
+                    <ReadingListEntry key={index} url={url} title={title} excerpt={excerpt} />
+                ))}
 
                 <p className="-mt-4">
-                    <Link href="/raindrop-links">
+                    <Link href="/reading-list/raindrop-links">
                         <a className="font-semibold">See all Raindrop links</a>
                     </Link>
                 </p>
@@ -52,10 +68,13 @@ export default function ReadingList() {
                     Latest 3 Feedbin stars
                 </h3>
 
-                {/* <ReadingListEntry></ReadingListEntry> */}
+
+                {latestFeedbinData.map(({ title, author, summary, url }, index) => (
+                    <ReadingListEntry key={index} url={url} title={title} excerpt={summary} publication={author} />
+                ))}
 
                 <p className="-mt-4">
-                    <Link href="/feedbin-stars">
+                    <Link href="/reading-list/feedbin-stars">
                         <a className="font-semibold">See all Feedbin stars</a>
                     </Link>
                 </p>
@@ -68,6 +87,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const queryClient = new QueryClient()
 
     await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
+
+    await queryClient.prefetchQuery('raindropData', () => fetchRaindropData())
+
+    await queryClient.prefetchQuery('feedbinData', () => fetchFeedbinData())
 
     return {
         props: {

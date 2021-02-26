@@ -32,7 +32,9 @@ export default function Pocket() {
 
                 {pocketData.map(({ title, url, authors, excerpt, id, tags }) => (
 
-                    <section key={id} className="mt-16 border-t-2 border-yellow-200">
+
+
+                    <section key={id} className="rprose readingListItem dark:prose-light dark:bg-gray-800">
 
                         <p className='mb-0'>
                             <a href={url} className='font-semibold'>{title ? title : url}</a>
@@ -50,7 +52,7 @@ export default function Pocket() {
                         </p>
 
 
-                        {excerpt &&
+                        { excerpt &&
                             <p className='mb-2'><em>Summary: </em>{excerpt}</p>
                         }
 

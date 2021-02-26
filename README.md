@@ -13,3 +13,8 @@ Run the development server:
 ```bash
 npm run dev
 ```
+
+todo
+- admin
+- head metadata stuff?
+- dark mode

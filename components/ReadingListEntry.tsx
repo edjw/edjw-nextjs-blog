@@ -8,12 +8,13 @@ export default function ReadingListEntry({ url, title, excerpt = false, publicat
                         {title}
                     </a>
                 </p>
-                {excerpt &&
-                    <p className="-mt-4">{excerpt}</p>
-                }
 
                 {publication &&
                     <p className="-mt-4">{publication}</p>
+                }
+
+                {excerpt &&
+                    <p className="-mt-4">{excerpt}</p>
                 }
 
             </section>
