@@ -1,4 +1,5 @@
 import matter from 'gray-matter'
+import slugify from 'slugify'
 
 const getPosts = (context) => {
     const keys = context.keys()
@@ -8,7 +9,10 @@ const getPosts = (context) => {
     const dateTimeFormat = new Intl.DateTimeFormat("en-GB", { day: '2-digit', month: 'long', year: 'numeric' })
 
     const data = keys.map((key, index) => {
-        let slug = `/${key.replace(/^.*[\\\/]/, '').slice(0, -3)}`
+        let strippedFileName = key
+            .replace(/^.*[\\\/]/, '')
+            .slice(0, -3)
+        let slug = `/blog/${slugify(strippedFileName)}`
         const value = values[index]
         const postData = matter(value.default)
 

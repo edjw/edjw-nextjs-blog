@@ -8,7 +8,7 @@ tags:
 ---
 
 
-A few years ago, I made a tool called Get YouTube Thumbnails. [See my original blog post about it](https://edjohnsonwilliams.co.uk/2018/08/26/making-it-easy-to-get-thumbnails-of-youtube-videos.html).
+A few years ago, I made a tool called Get YouTube Thumbnails. [See my original blog post about it](/2018/08/26/making-it-easy-to-get-thumbnails-of-youtube-videos).
 
 This is what it did.
 

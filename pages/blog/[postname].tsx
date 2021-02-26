@@ -3,9 +3,10 @@ import slugify from 'slugify'
 import matter from 'gray-matter'
 import Link from 'next/link'
 
-import Layout from '../components/Layout'
-import getSlugs from '../utils/getSlugs'
-import markdownToHtml from '../utils/md2HTML'
+import Layout from '../../components/Layout'
+import markdownToHtml from '../../utils/md2HTML'
+
+import allPosts from '../../data/allBlogposts'
 
 import { GetStaticProps, GetStaticPaths } from 'next'
 
@@ -49,7 +50,7 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
                                 <span>Tagged as:</span>{' '}
 
                                 {tags.map((tag, index) => (
-                                    <Link href={`tags/${slugify(tag)}`} key={index}>
+                                    <Link href={`/tags/${slugify(tag)}`} key={index}>
                                         <a>{titleCase(tag)}</a>
                                     </Link>
                                 ))}
@@ -76,7 +77,7 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
 export const getStaticProps: GetStaticProps = async (context) => {
     const { postname } = context.params
 
-    const content = await import(`../posts/${postname}.md`)
+    const content = await import(`../../posts/${postname}.md`)
     const postData = matter(content.default)
 
     return {
@@ -91,13 +92,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const blogSlugs = ((context) => {
-        return getSlugs(context)
-    })
-        // directory, recursive, filetype
-        (require.context('../posts', true, /\.md$/))
 
-    const paths = blogSlugs.map((slug) => `/${slug}`)
+
+    const paths = allPosts.map((post) => `${post.slug}`)
+
 
     return {
         paths, // An array of path names, and any params

@@ -1,7 +1,8 @@
-import Layout from '../components/Layout'
-import PostList from '../components/PostList'
-import getPosts from '../utils/getPosts'
+import Layout from '../../components/Layout'
+import PostList from '../../components/PostList'
 import { GetStaticProps } from 'next'
+
+import allPosts from '../../data/allBlogposts'
 
 export default function AllPosts({ allPosts, ...props }) {
     return (
@@ -20,11 +21,6 @@ export default function AllPosts({ allPosts, ...props }) {
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const allPosts = ((context) => {
-        return getPosts(context)
-    })
-        // directory, recursive?, extension to look for
-        (require.context('../posts', false, /\.md$/))
 
 
     return {

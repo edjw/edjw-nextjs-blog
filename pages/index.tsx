@@ -4,15 +4,16 @@ import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 
-import getPosts from '../utils/getPosts'
+import allPosts from '../data/allBlogposts'
 
 const title = "Ed Johnson Williams' website"
+const description = "Ed Johnson Williams' website"
 
 export default function Index({ featuredPosts, ...props }) {
 
   return (
     <>
-      <Layout pageTitle={title} description={description || title}>
+      <Layout pageTitle={title} description={description}>
 
         <section>
           <p>
@@ -45,15 +46,7 @@ export default function Index({ featuredPosts, ...props }) {
 
 export const getStaticProps: GetStaticProps = async (context) => {
 
-  const allPosts = ((context) => {
-    return getPosts(context)
-  })
-    // directory, recursive?, extension to look for
-    (require.context('../posts', false, /\.md$/))
-
-
   const featuredPosts = allPosts.filter((post) => post.featured === true)
-
 
   return {
     props: {

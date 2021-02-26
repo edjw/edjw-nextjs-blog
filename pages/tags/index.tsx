@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
 import Layout from '../../components/Layout'
-import getPosts from '../../utils/getPosts'
+
+import allPosts from '../../data/allBlogposts'
 
 const title = 'Tags'
 const description = 'Tags from my blog posts'
@@ -37,12 +38,6 @@ export default function Tags({ tags, ...props }) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-
-    const allPosts = ((context) => {
-        return getPosts(context)
-    })
-        // directory, recursive?, extension to look for
-        (require.context('../../posts', false, /\.md$/))
 
 
     // the state of this

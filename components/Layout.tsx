@@ -34,7 +34,9 @@ export default function Layout({ children, pageTitle, description, ...props }) {
 
                 <Header title={siteTitle} currentPath={currentPath} />
 
-                <main className="mt-8 prose dark:prose-light">{children}</main>
+                <main className="mt-8 prose dark:prose-light">
+                    {children}
+                </main>
 
                 <Footer
                     repository={repository}

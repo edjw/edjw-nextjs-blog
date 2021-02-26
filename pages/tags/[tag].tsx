@@ -2,16 +2,9 @@ import slugify from 'slugify'
 import { titleCase } from "title-case";
 import Layout from '../../components/Layout'
 import PostList from '../../components/PostList'
-import getPosts from '../../utils/getPosts'
-import getSlugs from '../../utils/getSlugs'
-import Link from 'next/link'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-const allPosts = ((context) => {
-    return getPosts(context)
-})
-    // directory, recursive?, extension to look for
-    (require.context('../../posts', false, /\.md$/))
+import allPosts from '../../data/allBlogposts'
 
 export default function TagPage({ tagName, tagPosts }) {
     return (
