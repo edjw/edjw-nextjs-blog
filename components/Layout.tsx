@@ -15,7 +15,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
-                <meta name="Description" content={description}></meta>
+                <meta name="description" content={description} />
                 <title>{pageTitle || siteTitle}</title>
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" key="twcard" />

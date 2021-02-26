@@ -10,7 +10,7 @@ export default function Index({ featuredPosts, title, description, ...props }) {
 
   return (
     <>
-      <Layout pageTitle={title} description={description}>
+      <Layout pageTitle={title} description={description || title}>
 
         <section>
           <p>
