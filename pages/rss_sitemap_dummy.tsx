@@ -33,7 +33,7 @@ async function generateRss(posts) {
     return `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
       <title>${siteTitle}</title>
-      <link href="${siteURL}" rel="self"/>
+      <link href="${siteURL}/feed.xml" rel="self"/>
       <description>${siteDescription}</description>
       <language>en</language>
       <updated>${new Date(posts[0].date).toISOString()}</updated>

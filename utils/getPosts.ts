@@ -1,5 +1,6 @@
 import matter from 'gray-matter'
 import slugify from 'slugify'
+import readingTime from 'reading-time'
 
 const getPosts = (context) => {
     const keys = context.keys()
@@ -20,6 +21,7 @@ const getPosts = (context) => {
             title: postData.data.title,
             date: dateTimeFormat.format(postData.data.date),
             markdownBody: postData.content,
+            readingTime: readingTime(postData.content).text,
             featured: postData.data.featured || false,
             tags: postData.data.tags || null,
             slug,

@@ -1,6 +1,8 @@
 import { titleCase } from "title-case";
 import slugify from 'slugify'
 import matter from 'gray-matter'
+import readingTime from 'reading-time'
+
 import Link from 'next/link'
 
 import Layout from '../../components/Layout'
@@ -10,7 +12,7 @@ import allPosts from '../../data/allBlogposts'
 
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-export default function BlogPost({ title, date, tags, socialDescription, markdownBody }) {
+export default function BlogPost({ title, date, tags, socialDescription, markdownBody, readingTime }) {
     if (!title) return <></>
 
     return (
@@ -34,14 +36,14 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
 
                     <section>
                         <p className="my-1">
-                            <span>Published:</span>
+                            <span>Published: </span>
                             <time>{date}</time>
                         </p>
 
-                        {/* <p className="my-1">
-                            <span>Reading time:</span>
-                            {content | readingTime}
-                        </p> */}
+                        <p className="my-1">
+                            <span>Reading time: </span>
+                            {readingTime}
+                        </p>
 
 
                         {(tags.length > 0) &&
@@ -56,11 +58,6 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
                                 ))}
 
                             </p>}
-
-                        {/* {tags.map((tag, index) => (
-                            <span key={index}>{tag}</span>
-                        ))} */}
-
 
                     </section>
 
@@ -87,6 +84,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
             socialDescription: postData.data.socialDescription || '',
             tags: postData.data.tags || '',
             markdownBody: await markdownToHtml(postData.content),
+            readingTime: readingTime(postData.content).text,
         }
     }
 }
