@@ -4,7 +4,7 @@
 
 @layer base {
   a {
-    @apply border-b-2 border-transparent no-underline;
+    @apply border-b-2 border-transparent no-underline font-normal;
   }
 
   a:hover {
@@ -27,6 +27,6 @@
 
 @layer utilities {
   .prose a {
-    @apply break-words;
+    @apply break-words font-normal;
   }
 }
