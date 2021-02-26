@@ -14,7 +14,7 @@ export default function Index({ featuredPosts, ...props }) {
     <>
       <Layout pageTitle={title} description={description}>
 
-        <section className='px-8 py-1 text-gray-900 bg-yellow-50'>
+        <section className='px-8 py-1 text-gray-900 border-t-4 border-yellow-200 bg-yellow-50'>
           <p>
             My personal site
           </p>
@@ -30,7 +30,7 @@ export default function Index({ featuredPosts, ...props }) {
 
           <p>
             A selection of my blogposts. You can also {' '}
-            <Link href="/all-posts">
+            <Link href="/blog">
               <a className="font-semibold">see all blogposts</a>
             </Link>
             .
@@ -39,7 +39,7 @@ export default function Index({ featuredPosts, ...props }) {
           <PostList posts={featuredPosts} showYears={false} />
 
           <p>
-            <Link href="/all-posts">
+            <Link href="/blog">
               <a className="font-semibold">See all blogposts</a>
             </Link>
           </p>
