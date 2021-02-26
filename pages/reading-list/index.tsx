@@ -1,10 +1,10 @@
 import { QueryClient, useQuery } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
-import { fetchPocketData } from '../data/fetchPocketQuery'
+import { fetchPocketData } from '../../data/fetchPocketQuery'
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import { GetStaticProps } from 'next'
-import ReadingListEntry from '../components/ReadingListEntry'
+import ReadingListEntry from '../../components/ReadingListEntry'
 
 const numberOfArticles = 3
 const title = 'Reading List'
@@ -22,7 +22,7 @@ export default function ReadingList() {
                 <p>See what I've saved in Pocket, Raindrop, and Feedbin.</p>
 
                 <h3>
-                    Latest 3 Pocket articles
+                    <Link href="/reading-list/pocket-articles"><a className='font-semibold'>Latest 3 Pocket articles</a></Link>
                 </h3>
 
                 {pocketData.map((item) => (
@@ -31,7 +31,7 @@ export default function ReadingList() {
 
 
                 <p className="-mt-4">
-                    <Link href="/pocket-articles">
+                    <Link href="/reading-list/pocket-articles">
                         <a className="font-semibold">See all Pocket links</a>
                     </Link>
                 </p>

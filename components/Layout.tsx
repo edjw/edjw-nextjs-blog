@@ -1,10 +1,10 @@
-import siteData from '../data/siteconfig.json'
+import siteData from '../data/siteconfig'
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 import { useRouter } from 'next/router'
 
-const { title: siteTitle, description: siteDescription, url, author: { twitterUsername }, repository, RSSFeed, sitemap, contentLicence } = siteData
+const { title: siteTitle, description, url, author: { twitterUsername }, repository, RSSFeed, sitemap, contentLicence } = siteData
 
 export default function Layout({ children, pageTitle, description, ...props }) {
     const router = useRouter()
@@ -17,6 +17,9 @@ export default function Layout({ children, pageTitle, description, ...props }) {
                 <meta charSet="utf-8" />
                 <meta name="description" content={description} />
                 <title>{pageTitle || siteTitle}</title>
+                <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+
+
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" key="twcard" />
                 <meta name="twitter:creator" content={twitterUsername} key="twhandle" />

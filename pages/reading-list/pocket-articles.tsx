@@ -1,7 +1,7 @@
 import { QueryClient, useQuery } from 'react-query'
 import { dehydrate } from 'react-query/hydration'
-import { fetchPocketData } from '../data/fetchPocketQuery'
-import Layout from '../components/Layout'
+import { fetchPocketData } from '../../data/fetchPocketQuery'
+import Layout from '../../components/Layout'
 import { GetStaticProps } from 'next'
 
 const numberOfArticles = 0 // 0 is unlimited
@@ -32,9 +32,10 @@ export default function Pocket() {
 
                 {pocketData.map(({ title, url, authors, excerpt, id, tags }) => (
 
-                    <section key={id} className="mt-4 border-t-2 border-yellow-200">
-                        <p>
-                            <a href={url}>{title ? title : url}</a>
+                    <section key={id} className="mt-16 border-t-2 border-yellow-200">
+
+                        <p className='mb-0'>
+                            <a href={url} className='font-semibold'>{title ? title : url}</a>
                             {authors && " by "}
                             {authors &&
                                 authors.map((author, index) => (
@@ -48,21 +49,22 @@ export default function Pocket() {
                                 ))}
                         </p>
 
-                        {/*  This should be small not p  */}
-                        <p>
-                            <a
-                                href={`https://app.getpocket.com/read/${id}`}
-                                aria-label={`Read ${title ? title : 'article'}${authors
-                                    && ' by '} ${authors && authors} on Pocket`}>Pocket article link
-                        </a>
-                        </p>
 
                         {excerpt &&
-                            <p><em>Summary: </em>{excerpt}</p>
+                            <p className='mb-2'><em>Summary: </em>{excerpt}</p>
                         }
 
-                        {/* this should be small not p */}
-                        <p>
+                        <p className='mt-0'>
+                            <a href={`https://app.getpocket.com/read/${id}`}
+                                aria-label={`Read ${title ? title : 'article'}${authors
+                                    && ' by '} ${authors && authors} on Pocket`}
+                                className="text-gray-500 text-opacity-90">
+                                Read on Pocket
+                            </a>
+                        </p>
+
+                        <p className="text-gray-500">
+
                             {tags &&
 
                                 <i>Tags: </i>}
