@@ -22,9 +22,7 @@
     "next-env.d.ts",
     "globals.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "data/fetchPocketQuery.js",
-    "data/allBlogposts.js"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
