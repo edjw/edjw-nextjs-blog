@@ -16,5 +16,4 @@ npm run dev
 
 todo
 - admin
-- head metadata stuff?
 - dark mode

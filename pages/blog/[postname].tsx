@@ -18,14 +18,14 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
     return (
         <>
             <Layout pageTitle={title} description={socialDescription}>
-
                 <article className="prose h-entry dark:prose-light">
-
                     {/* <!-- h-entry things --> */}
                     <div className="hidden">
-                        <a href="{{ page.url }}"></a>
-                        <time className="dt-published">{date}</time>
-                        {/* need to be iso8061 date */}
+                        {/* <a href="{{ page.url }}"></a> */}
+                        <time className="dt-published">{new Date(date).toUTCString()}</time>
+                        {tags.map((tag, index) => (
+                            <a key={index} className="p-category" href={`/tags/${slugify(tag)}`}>{titleCase(tag)}</a>
+                        ))}
                         <a rel="author" href="https://edjohnsonwilliams.co.uk">Ed Johnson-Williams</a>
                     </div>
                     {/* <!-- End of h-entry things --> */}
