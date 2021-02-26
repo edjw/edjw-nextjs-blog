@@ -6,7 +6,9 @@ import PostList from '../components/PostList'
 
 import getPosts from '../utils/getPosts'
 
-export default function Index({ featuredPosts, title, description, ...props }) {
+const title = "Ed Johnson Williams' website"
+
+export default function Index({ featuredPosts, ...props }) {
 
   return (
     <>
