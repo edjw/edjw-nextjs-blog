@@ -19,9 +19,9 @@ export default function ReadingList() {
                 <h2>
                     {title}
                 </h2>
-                <p>See what I've saved in Pocket, Raindrop, and Feedbin.</p>
+                <p>See what I've saved in <a href="#pocket-section">Pocket</a>, <a href="#raindrop-section">Raindrop</a>, and <a href="#feedbin-section">Feedbin</a>.</p>
 
-                <h3>
+                <h3 id='pocket-section'>
                     <Link href="/reading-list/pocket-articles"><a className='font-semibold'>Latest 3 Pocket articles</a></Link>
                 </h3>
 
@@ -36,7 +36,7 @@ export default function ReadingList() {
                     </Link>
                 </p>
 
-                <h3 className="mt-12">
+                <h3 className="mt-12" id='raindrop-section'>
                     Latest 3 Raindrop links
                 </h3>
 
@@ -48,7 +48,7 @@ export default function ReadingList() {
                     </Link>
                 </p>
 
-                <h3 className="mt-12">
+                <h3 className="mt-12" id='feedbin-section'>
                     Latest 3 Feedbin stars
                 </h3>
 
