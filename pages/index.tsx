@@ -10,30 +10,37 @@ const title = "Ed Johnson Williams' website"
 const description = "Ed Johnson Williams' website"
 
 export default function Index({ featuredPosts, ...props }) {
-
   return (
     <>
       <Layout pageTitle={title} description={description}>
 
-        <section>
+        <section className='px-8 py-1 text-gray-900 bg-yellow-50'>
           <p>
             My personal site
-        </p>
+          </p>
 
-          <p className="mt-2">
+          <p>
             Some tech, some politics, some shapenote music
-            </p>
+          </p>
         </section>
 
 
-        <div className="mt-8 prose" >
-          <h2 className="-mb-2" >A few posts I like</h2>
+        <div className="mt-10 prose">
+          <h2>A few blogposts I like</h2>
+
+          <p>
+            A selection of my blogposts. You can also {' '}
+            <Link href="/all-posts">
+              <a className="font-semibold">see all blogposts</a>
+            </Link>
+            .
+          </p>
 
           <PostList posts={featuredPosts} showYears={false} />
 
           <p>
-            <Link href="/all-posts" >
-              <a className="font-semibold"> See all posts </a>
+            <Link href="/all-posts">
+              <a className="font-semibold">See all blogposts</a>
             </Link>
           </p>
         </div>
