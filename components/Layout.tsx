@@ -31,6 +31,8 @@ export default function Layout({ children, pageTitle, description, ...props }) {
                 <meta property="og:title" content={pageTitle} key="ogtitle" />
                 <meta property="og:description" content={description} key="ogdesc" />
                 <link rel="alternate" type="application/rss+xml" title="RSS feed for Ed Johnson-Williams’ blog" href="/feed.xml" />
+
+                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </Head>
 
 
