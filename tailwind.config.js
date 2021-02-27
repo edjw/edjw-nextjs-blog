@@ -25,6 +25,9 @@ module.exports = {
               '[class~="lead"]': {
                 color: theme('colors.gray.300'),
               },
+              p: {
+                color: theme('colors.white'),
+              },
               a: {
                 color: theme('colors.white'),
               },

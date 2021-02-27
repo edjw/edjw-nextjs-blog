@@ -33,8 +33,8 @@ export default function Layout({ children, pageTitle, description, ...props }) {
                 <link rel="alternate" type="application/rss+xml" title="RSS feed for Ed Johnson-Williams’ blog" href="/feed.xml" />
             </Head>
 
-            <div className="container grid h-screen max-w-4xl px-4 pt-4 mx-auto bg-white grid-cols-full grid-rows-auto-1-auto dark:bg-trueGray-800">
 
+            <div className="container grid h-screen max-w-4xl px-4 pt-4 mx-auto bg-white grid-cols-full grid-rows-auto-1-auto dark:bg-trueGray-800">
                 <Header title={siteTitle} currentPath={currentPath} />
 
                 <main className="mt-8 prose dark:prose-light">
@@ -47,7 +47,6 @@ export default function Layout({ children, pageTitle, description, ...props }) {
                     sitemap={sitemap}
                     contentLicence={contentLicence}
                 />
-
             </div>
         </>
     )

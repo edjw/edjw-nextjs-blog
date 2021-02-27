@@ -11,10 +11,7 @@ export default function Navigation() {
                 </Link>
             ))}
 
-
             {/* {% if section == nav.section %} aria-current="page"{% endif %} */}
-
-
 
         </nav >
     )

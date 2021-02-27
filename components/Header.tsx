@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Navigation from './Navigation'
+import ThemeToggleButton from './themeToggleButton'
 
 export default function Header({ title, currentPath }) {
     return (
@@ -21,8 +22,7 @@ export default function Header({ title, currentPath }) {
 
                     </h1>
 
-                    <button id="themeButton" className="w-6 h-6 mt-2.5 dark:text-white" aria-label='Toggle theme'></button>
-
+                    <ThemeToggleButton />
                 </div>
 
                 <Navigation />

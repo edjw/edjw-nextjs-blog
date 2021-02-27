@@ -14,7 +14,7 @@ export default function Index({ featuredPosts, ...props }) {
     <>
       <Layout pageTitle={title} description={description}>
 
-        <section className='px-8 py-1 text-gray-900 border-t-4 border-yellow-200 bg-yellow-50'>
+        <section className='px-8 py-4 prose text-gray-900 border-t-4 border-yellow-200 bg-yellow-50 dark:bg-gray-800 dark:prose-light'>
           <p>
             My personal site
           </p>
@@ -25,7 +25,7 @@ export default function Index({ featuredPosts, ...props }) {
         </section>
 
 
-        <div className="mt-10 prose">
+        <div className="mt-10">
           <h2>A few blogposts I like</h2>
 
           <p>
