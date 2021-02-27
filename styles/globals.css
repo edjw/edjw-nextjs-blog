@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   a {
     @apply border-b-2 border-transparent no-underline font-normal;
   }
