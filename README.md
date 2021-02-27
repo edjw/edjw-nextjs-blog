@@ -17,3 +17,5 @@ npm run dev
 todo
 - admin
 - dark mode
+- switch to mdx?
+- auto generate social images with cloudinary
