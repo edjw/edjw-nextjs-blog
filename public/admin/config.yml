@@ -13,7 +13,7 @@ backend:
 
 # site_url: https://edjohnsonwilliams.co.uk
 
-media_folder: "/assets/images"
+media_folder: "/images"
 
 collections:
   # Blog posts
