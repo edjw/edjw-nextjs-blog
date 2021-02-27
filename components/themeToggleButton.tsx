@@ -33,7 +33,7 @@ export default function themeToggleButton() {
     else {
         return (
             <>
-                No theme??
+                <button className="w-6 h-6 mt-2.5"></button>
             </>
         )
     }
