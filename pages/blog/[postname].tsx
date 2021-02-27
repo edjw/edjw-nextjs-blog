@@ -48,10 +48,10 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
 
                         {(tags.length > 0) &&
 
-                            <p className="flex gap-1 my-1">
-                                <span>Tagged as: </span>
+                            <p className="flex my-1">
+                                <span className='mr-1'>Tags: </span>
 
-                                <span className='flex gap-2'>
+                                <span className='flex space-x-2'>
                                     {tags.map((tag, index) => (
                                         <Link href={`/tags/${slugify(tag)}`} key={index}>
                                             <a>{titleCase(tag)}</a>

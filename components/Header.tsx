@@ -4,7 +4,7 @@ import Navigation from './Navigation'
 export default function Header({ title, currentPath }) {
     return (
         <>
-            <header className="">
+            <header>
                 <div className="flex items-center">
                     <h1 className="mr-6 text-4xl prose dark:prose-light">
                         <Link href="/">
