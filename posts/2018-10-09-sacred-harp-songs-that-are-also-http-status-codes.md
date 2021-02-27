@@ -10,7 +10,7 @@ This is another _really_ silly Sacred Harp one. Someone called "_404" (_[_Youth 
 
 My wife estimated that this will be funny to about three people. That might be pushing it.
 
-NB. I used [the Sacred Harp dataset](https://edjohnsonwilliams.co.uk/2018/10/08/a-dataset-for-sacred-harp-songs.html) I just published to work this out.
+NB. I used [the Sacred Harp dataset](/blog/2018-10-08-a-dataset-for-sacred-harp-songs) I just published to work this out.
 
 ***
 

@@ -29,4 +29,8 @@
   .prose a {
     @apply break-words font-normal;
   }
+
+  .prose p > code {
+    @apply break-words;
+  }
 }

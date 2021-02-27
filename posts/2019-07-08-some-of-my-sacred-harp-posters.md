@@ -14,7 +14,9 @@ Over the last year, I've been designing posters for the [Durham Sacred Harp](htt
 This one is very close to the one that I printed up and put around town. There are a couple of small differences. If you haven't sung Sacred Harp before, then the logo at the top is alluding to [the hollow square arrangement](https://en.wikipedia.org/wiki/Sacred_Harp#Singing_Sacred_Harp_music) that Sacred Harp singers sit in. I've tried to prioritise a modern look and legibility of the copy.
 
 
-<a href="/assets/images/blue_square.png"><img src="/assets/images/blue_square.png" alt=""></a>
+<a href="/assets/images/blue_square.png">
+<img src="/assets/images/blue_square.png" alt="">
+</a>
 
 
 ## Bookwrap

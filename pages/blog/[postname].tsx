@@ -22,7 +22,7 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
                     {/* <!-- h-entry things --> */}
                     <div className="hidden">
                         {/* <a href="{{ page.url }}"></a> */}
-                        <time className="dt-published">{new Date(date).toUTCString()}</time>
+                        {/* <time className="dt-published">{new Date(date).toUTCString()}</time> */}
                         {tags.map((tag, index) => (
                             <a key={index} className="p-category" href={`/tags/${slugify(tag)}`}>{titleCase(tag)}</a>
                         ))}
@@ -48,14 +48,16 @@ export default function BlogPost({ title, date, tags, socialDescription, markdow
 
                         {(tags.length > 0) &&
 
-                            <p className="flex gap-2 my-1">
-                                <span>Tagged as:</span>{' '}
+                            <p className="flex gap-1 my-1">
+                                <span>Tagged as: </span>
 
-                                {tags.map((tag, index) => (
-                                    <Link href={`/tags/${slugify(tag)}`} key={index}>
-                                        <a>{titleCase(tag)}</a>
-                                    </Link>
-                                ))}
+                                <span className='flex gap-2'>
+                                    {tags.map((tag, index) => (
+                                        <Link href={`/tags/${slugify(tag)}`} key={index}>
+                                            <a>{titleCase(tag)}</a>
+                                        </Link>
+                                    ))}
+                                </span>
 
                             </p>}
 

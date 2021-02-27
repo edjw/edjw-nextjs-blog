@@ -12,4 +12,4 @@ This let me add in Netlify CMS which will make managing the content a lot easier
 
 On the old site, I was using client-side Javascript to work out the dates of the next three singings. This was always a hack that I wasn't that happy with. If someone had the date and time wrong on their computer it wouldn't show the correct dates.
 
-I've put the script into an Eleventy Javascript Data files to get those dates at build time. Then I use the IFTT and Netlify build webhook technique I wrote about [in this blogpost](/2019/04/26/publishing-my-pocket-reading-list-on-this-website) to rebuild the site every Sunday at midnight.
+I've put the script into an Eleventy Javascript Data files to get those dates at build time. Then I use the IFTT and Netlify build webhook technique I wrote about [in this blogpost](/blog/2019-04-25-publishing-my-pocket-reading-list-on-this-website) to rebuild the site every Sunday at midnight.

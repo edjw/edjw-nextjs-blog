@@ -20,7 +20,7 @@ It's nice to have your own website. It's good to have an online space where you 
 
 As with most hobbies, having the free time to put a website together is a privilege. Lots of people who might want to do this just don't have that free time. Fortunately for me, I have had the time to learn how to make a website for myself.
 
-Writing blogposts is a great way to work out what you think. Sometimes people read what you write and thank you for it. Sometimes, it's just [a good way of getting something out of your system](/2020/04/18/on-the-whataboutery-around-the-saudi-takeover-of-newcastle-united).
+Writing blogposts is a great way to work out what you think. Sometimes people read what you write and thank you for it. Sometimes, it's just [a good way of getting something out of your system](/blog/2020-04-18-on-the-whataboutery-around-the-takeover-of-newcastle-united).
 
 But if all I wanted was a place to publish writing that wasn't Facebook, I could use a blogging platform like <span>Wordpress.com</span>. If I didn't mind using a social media platform, I could publish writing on Facebook Posts or do threads on Twitter. I would spend much less time fitting the pieces of a website together, adjusting the layout, and adding new pages.
 
