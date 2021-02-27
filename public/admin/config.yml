@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main # Branch to update
   commit_messages:
     create: Create {{collection}} "{{slug}}"
     update: Update {{collection}} "{{slug}}"
@@ -13,7 +13,7 @@ backend:
 
 # site_url: https://edjohnsonwilliams.co.uk
 
-media_folder: "/images"
+media_folder: "public/images"
 
 collections:
   # Blog posts
