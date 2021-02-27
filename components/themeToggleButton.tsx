@@ -6,7 +6,9 @@ export default function themeToggleButton() {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
     useEffect(() => setMounted(true), [])
-    if (!mounted) return null
+    if (!mounted) return (
+        <></>
+    )
 
 
     if (theme === 'dark') {
@@ -35,12 +37,5 @@ export default function themeToggleButton() {
         )
     }
 
-    // else {
-    //     return (
-    //         <>
-    //             <button className="w-6 h-6 mt-2.5"></button>
-    //         </>
-    //     )
-    // }
 };
 

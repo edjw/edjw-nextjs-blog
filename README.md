@@ -15,6 +15,5 @@ npm run dev
 ```
 
 todo
-- admin
 - switch to mdx?
 - auto generate social images with cloudinary
