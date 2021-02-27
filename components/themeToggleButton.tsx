@@ -35,12 +35,12 @@ export default function themeToggleButton() {
         )
     }
 
-    else {
-        return (
-            <>
-                <button className="w-6 h-6 mt-2.5"></button>
-            </>
-        )
-    }
+    // else {
+    //     return (
+    //         <>
+    //             <button className="w-6 h-6 mt-2.5"></button>
+    //         </>
+    //     )
+    // }
 };
 
