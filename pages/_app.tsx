@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <Hydrate state={pageProps.dehydratedState}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="system">
           <Component {...pageProps} />
         </ThemeProvider>
       </Hydrate>
