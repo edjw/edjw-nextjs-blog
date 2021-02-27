@@ -48,8 +48,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      # - { label: "Layout", name: "layout", widget: "string" }
+      # - { label: "Permalink", name: "permalink", widget: "string" }
       - {
           label: "Social Description",
           name: "socialDescription",
