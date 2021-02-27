@@ -18,4 +18,3 @@ todo
 - admin
 - switch to mdx?
 - auto generate social images with cloudinary
-- consolidate images and redo links
