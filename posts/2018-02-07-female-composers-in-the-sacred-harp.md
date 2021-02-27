@@ -24,7 +24,7 @@ tags:
 
 <p>There's <a href="#toc_7">a note at the bottom of this post</a> about how I attributed gender to the composers. The short version is that I used the name given in the book for the composer and didn't get into nuances.</p>
 
-<p>The data I created and used for this is available here as <a href="/uploads/2018/02/08/sacredharpcomposers.xls">an Excel (.xls) spreadsheet</a>.</p>
+<p>The data I created and used for this is available here as <a href="/images/sacredharpcomposers.xls">an Excel (.xls) spreadsheet</a>.</p>
 
 <p><a href="mailto:mail@edjohnsonwilliams.co.uk">Let me know</a> if you see errors, would like some more detail on an answer, or if there are other questions you'd be interested in seeing the answer to.</p>
 
@@ -86,8 +86,8 @@ tags:
 
 <p>If all 554 songs in the book were led equally, each song would be led 0.18% (1 in every 554) of the time. 9 of the 25 songs in the book by female composers are more popular than that.</p>
 
-<a href="/uploads/2018/02/08/pc_all_songs_by_song_number_.png">
-    <img src="/uploads/2018/02/08/pc_all_songs_by_song_number_.png" alt="">
+<a href="/images/pc_all_songs_by_song_number_.png">
+    <img src="/images/pc_all_songs_by_song_number_.png" alt="">
 </a>
 
 <p>Here are the songs by female composers sorted by the percentage of all songs led in minuted singing 1995-2017 that that particular song has been led. The percentages are rounded to 2 decimal places. The 1 in N figure is from the unrounded percentage which is why there's a slight discrepancy sometimes.
@@ -150,8 +150,8 @@ tags:
 
 <p>In 1995 – the year where songs by female composers were least popular – 1 in every 25 songs led at a minuted singing was by a female composer. By comparison, in 2017 – when female composers' songs were most popular – 1 in every 21 songs was by a female composer.</p>
 
-<a href="/uploads/2018/02/08/pc_all_songs_led_by_female_composer_.png">
-    <img src="/uploads/2018/02/08/pc_all_songs_led_by_female_composer_.png" alt="">
+<a href="/images/pc_all_songs_led_by_female_composer_.png">
+    <img src="/images/pc_all_songs_led_by_female_composer_.png" alt="">
 </a>
 
 <h2 id="toc_8">Which songs by female composers have changed the most in the popularity over time?</h2>
@@ -170,8 +170,8 @@ tags:
 
 <p><strong>+2.84%</strong> – <strong>466</strong> Haynes Creek – Joyce Harrison</p>
 
-<a href="/uploads/2018/02/12/biggest_increase_popularity.png">
-    <img src="/uploads/2018/02/12/biggest_increase_popularity.png" alt="">
+<a href="/images/biggest_increase_popularity.png">
+    <img src="/images/biggest_increase_popularity.png" alt="">
 </a>
 
 <p>The four songs that have decreased the most in popularity in that timeframe are:</p>
@@ -184,8 +184,8 @@ tags:
 
 <p><strong>-2.74%</strong> – <strong>378b</strong> Never Turn Back – F. E. Parkerson</p>
 
-<a href="/uploads/2018/02/12/biggest_decrease_popularity.png">
-    <img src="/uploads/2018/02/12/biggest_decrease_popularity.png" alt="">
+<a href="/images/biggest_decrease_popularity.png">
+    <img src="/images/biggest_decrease_popularity.png" alt="">
 </a>
 
 <h2 id="toc_7">How I attributed gender to composers</h2>
@@ -200,4 +200,4 @@ tags:
 
 <p>90 of the composers in the book use their initials instead of their first name. I assumed that they were male unless I found out that they were female. (M. Durham, P. R. Lancaster, and M. L. A. Lancaster are female composers.) It seems particularly likely that I've made mistakes because of this assumption.</p>
 
-<p>Finally, I have doubtless made mistakes in assigning a gender to some of the composers even considering the process above. The data I used is available here as <a href="/uploads/2018/02/08/sacredharpcomposers.xls">an Excel (.xls) spreadsheet</a>. <a href="mailto:mail@edjohnsonwilliams.co.uk">Let me know</a> if you see any mistakes.</p>
+<p>Finally, I have doubtless made mistakes in assigning a gender to some of the composers even considering the process above. The data I used is available here as <a href="/images/sacredharpcomposers.xls">an Excel (.xls) spreadsheet</a>. <a href="mailto:mail@edjohnsonwilliams.co.uk">Let me know</a> if you see any mistakes.</p>
