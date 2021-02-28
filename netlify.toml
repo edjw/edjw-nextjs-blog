@@ -9,3 +9,7 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "same-origin"
+
+[[redirects]]
+  from = "/all-posts/"
+  to = "/blog/"

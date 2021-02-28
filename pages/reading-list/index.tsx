@@ -51,7 +51,11 @@ export default function ReadingList() {
                 </p>
 
                 <h3 className="mt-12" id='raindrop-section'>
-                    Latest 3 Raindrop links
+                    <Link href="/reading-list/raindrop-links">
+                        <a className='font-semibold'>
+                            Latest 3 Raindrop links
+                            </a>
+                    </Link>
                 </h3>
 
                 {latestRaindropData.map(({ title, excerpt, url }, index) => (
@@ -65,7 +69,12 @@ export default function ReadingList() {
                 </p>
 
                 <h3 className="mt-12" id='feedbin-section'>
-                    Latest 3 Feedbin stars
+
+                    <Link href="/reading-list/feedbin-stars">
+                        <a className='font-semibold'>
+                            Latest 3 Feedbin stars
+                        </a>
+                    </Link>
                 </h3>
 
 
