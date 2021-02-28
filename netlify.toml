@@ -80,11 +80,11 @@
 
 [[redirects]]
   from="/2019/05/04/rebuilt-website-durham-sacred-harp.html"
-  to="/blog/2019-05-04-replicating-jekylls-markdownify-filter-in-nunjucks-with-eleventy"
+  to="/blog/2019-05-04-rebuilt-website-durham-sacred-harp"
 
 [[redirects]]
   from="/2019/05/04/replicating-jekylls-markdownify-filter-in-nunjucks-with-eleventy.html"
-  to="/blog/2019-05-04-rebuilt-website-durham-sacred-harp"
+  to="/blog/2019-05-04-replicating-jekylls-markdownify-filter-in-nunjucks-with-eleventy"
 
 [[redirects]]
   from="/2019/05/02/new-website-newcastle-sacred-harp.html"
@@ -92,51 +92,51 @@
 
 [[redirects]]
   from="/2019/04/26/publishing-my-pocket-reading-list-on-this-website.html"
-  to="/blog/2019-05-02-new-website-durham-sacred-harp"
-
-[[redirects]]
-  from="/2019/03/29/turning-off-targeted-ads.html"
   to="/blog/2019-04-25-publishing-my-pocket-reading-list-on-this-website"
 
 [[redirects]]
-  from="/2018/10/09/sacred-harp-songs-that-are-also-http-status-codes.html"
+  from="/2019/03/29/turning-off-targeted-ads.html"
   to="/blog/2019-03-29-new-website-turning-off-targeted-ads"
 
 [[redirects]]
-  from="/2018/10/08/a-dataset-for-sacred-harp-songs.html"
+  from="/2018/10/09/sacred-harp-songs-that-are-also-http-status-codes.html"
   to="/blog/2018-10-09-sacred-harp-songs-that-are-also-http-status-codes"
 
 [[redirects]]
-  from="/2018/08/26/making-it-easy-to-get-thumbnails-of-youtube-videos.html"
+  from="/2018/10/08/a-dataset-for-sacred-harp-songs.html"
   to="/blog/2018-10-08-a-dataset-for-sacred-harp-songs"
 
 [[redirects]]
-  from="/2018/07/06/a-better-way-of-removing-punctuation-from-a-string-in-python.html"
+  from="/2018/08/26/making-it-easy-to-get-thumbnails-of-youtube-videos.html"
   to="/blog/2018-08-26-new-website-making-it-easy-to-get-thumbnails-of-youtube-videos"
 
 [[redirects]]
-  from="/2018/06/10/square-numbers-in-sacred-harp-song-numbers.html"
+  from="/2018/07/06/a-better-way-of-removing-punctuation-from-a-string-in-python.html"
   to="/blog/2018-07-06-a-better-way-of-removing-punctuation-from-a-string-in-python"
 
 [[redirects]]
-  from="/2018/06/10/football-formations-in-sacred-harp-numbers.html"
+  from="/2018/06/10/square-numbers-in-sacred-harp-song-numbers.html"
   to="/blog/2018-06-10-square-numbers-in-sacred-harp-song-numbers"
 
 [[redirects]]
-  from="/2018/05/04/winners-and-losers-in-the-city-of-durham-parish-council-election.html"
+  from="/2018/06/10/football-formations-in-sacred-harp-numbers.html"
   to="/blog/2018-06-10-football-formations-in-sacred-harp-numbers"
 
 [[redirects]]
-  from="/2018/04/01/when-does-easter-sunday-fall-on-april-fools-day.html"
+  from="/2018/05/04/winners-and-losers-in-the-city-of-durham-parish-council-election.html"
   to="/blog/2018-05-04-winners-and-losers-in-the-city-of-durham-parish-council-election"
 
 [[redirects]]
-  from="/2018/02/08/female-composers-in-the-sacred-harp.html"
+  from="/2018/04/01/when-does-easter-sunday-fall-on-april-fools-day.html"
   to="/blog/2018-04-01-how-often-does-easter-sunday-fall-on-april-fools-day"
 
 [[redirects]]
-  from="/2018/01/22/new-website-durham-sacred-harp.html"
+  from="/2018/02/08/female-composers-in-the-sacred-harp.html"
   to="/blog/2018-02-07-female-composers-in-the-sacred-harp"
+
+[[redirects]]
+  from="/2018/01/22/new-website-durham-sacred-harp.html"
+  to="/blog/2019-05-02-new-website-durham-sacred-harp"
 
 [[redirects]]
   from="/2018/01/02/how-often-is-1st-january-a-monday.html"
