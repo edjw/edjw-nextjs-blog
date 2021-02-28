@@ -25,3 +25,135 @@
 [[redirects]]
   from="/feedbin-stars"
   to="/reading-list/feedbin-stars"
+
+[[redirects]]
+  from="/2021/01/13/re-written-website-get-youtube-thumbnails/"
+  to="/blog/2021-01-13-re-written-website-get-youtube-thumbnails"
+
+[[redirects]]
+  from="/2021/01/02/new-website-find-the-nearest-tailwind-colour/"
+  to="/blog/2021-01-02-new-website-find-the-nearest-tailwind-colour"
+
+[[redirects]]
+  from="/2020/10/01/new-website-first-draft-dont-let-editing-slow-down-your-first-draft/"
+  to="/blog/2020-10-01-new-website-first-draft-dont-let-editing-slow-down-your-first-draft"
+
+[[redirects]]
+  from="/2020/09/07/new-website-coffee-recipes-app-to-learn-svelte/"
+  to="/blog/2020-09-07-new-website-coffee-recipes-app-to-learn-svelte"
+
+[[redirects]]
+  from="/2020/05/17/websites-and-allotments-why-do-i-write-code/"
+  to="/blog/2020-05-17-websites-and-allotments-why-do-i-write-code"
+
+[[redirects]]
+  from="/2020/04/30/new-website-hammer-keys-get-trains/"
+  to="/blog/2020-04-30-new-website-hammer-keys-get-trains"
+
+[[redirects]]
+  from="/2020/04/18/on-the-whataboutery-around-the-saudi-takeover-of-newcastle-united/"
+  to="/blog/2020-04-18-on-the-whataboutery-around-the-takeover-of-newcastle-united"
+
+[[redirects]]
+  from="/2020/03/30/new-website-save-your-indie-high-street/"
+  to="/blog/2020-03-30-new-website-save-your-indie-high-street"
+
+[[redirects]]
+  from="/2020/03/24/development-and-production-favicons-in-eleventy/"
+  to="/blog/2020-03-24-development-production-favicons-eleventy"
+
+[[redirects]]
+  from="/2020/02/15/bernie-sanders-healthcare-plan-isnt-necessarily-the-best-way-to-universal-american-healthcare/"
+  to="/blog/2020-02-15-bernie-sanders-healthcare-plan-isnt-necessarily-the-best-way-to-universal-american-healthcare"
+
+[[redirects]]
+  from="/2019/11/02/twitters-political-ads-ban-has-an-accurate-definition-of-political-but-campaign-groups-wont-like-it-eventually/"
+  to="/blog/2019-11-02-twitters-political-ads-ban"
+
+[[redirects]]
+  from="/2019/10/01/new-website-i-made-a-test-site-to-learn-about-fetching-data-from-apis-and-turning-it-into-html-using-vanilla-js-and-accidentally-made-my-main-hacker-news-reader/"
+  to="/blog/2019-10-01-new-website-i-made-a-test-site-to-fetch-data-from-apis-and-turn-it-into-html-using-vanilla-js-and-accidentally-made-my-main-hacker-news-reader"
+
+[[redirects]]
+  from="/2019/07/08/some-of-my-sacred-harp-poster-designs/"
+  to="/blog/2019-07-08-some-of-my-sacred-harp-posters"
+
+[[redirects]]
+  from="/2019/05/04/rebuilt-website-durham-sacred-harp/"
+  to="/blog/2019-05-04-replicating-jekylls-markdownify-filter-in-nunjucks-with-eleventy"
+
+[[redirects]]
+  from="/2019/05/04/replicating-jekylls-markdownify-filter-in-nunjucks-with-eleventy/"
+  to="/blog/2019-05-04-rebuilt-website-durham-sacred-harp"
+
+[[redirects]]
+  from="/2019/05/02/new-website-newcastle-sacred-harp/"
+  to="/blog/2019-05-02-new-website-newcastle-sacred-harp"
+
+[[redirects]]
+  from="/2019/04/26/publishing-my-pocket-reading-list-on-this-website/"
+  to="/blog/2019-05-02-new-website-durham-sacred-harp"
+
+[[redirects]]
+  from="/2019/03/29/turning-off-targeted-ads.html"
+  to="/blog/2019-04-25-publishing-my-pocket-reading-list-on-this-website"
+
+[[redirects]]
+  from="/2018/10/09/sacred-harp-songs-that-are-also-http-status-codes/"
+  to="/blog/2019-03-29-new-website-turning-off-targeted-ads"
+
+[[redirects]]
+  from="/2018/10/08/a-dataset-for-sacred-harp-songs/"
+  to="/blog/2018-10-09-sacred-harp-songs-that-are-also-http-status-codes"
+
+[[redirects]]
+  from="/2018/08/26/making-it-easy-to-get-thumbnails-of-youtube-videos.html"
+  to="/blog/2018-10-08-a-dataset-for-sacred-harp-songs"
+
+[[redirects]]
+  from="/2018/07/06/a-better-way-of-removing-punctuation-from-a-string-in-python/"
+  to="/blog/2018-08-26-new-website-making-it-easy-to-get-thumbnails-of-youtube-videos"
+
+[[redirects]]
+  from="/2018/06/10/square-numbers-in-sacred-harp-song-numbers/"
+  to="/blog/2018-07-06-a-better-way-of-removing-punctuation-from-a-string-in-python"
+
+[[redirects]]
+  from="/2018/06/10/football-formations-in-sacred-harp-numbers/"
+  to="/blog/2018-06-10-square-numbers-in-sacred-harp-song-numbers"
+
+[[redirects]]
+  from="/2018/05/04/winners-and-losers-in-the-city-of-durham-parish-council-election/"
+  to="/blog/2018-06-10-football-formations-in-sacred-harp-numbers"
+
+[[redirects]]
+  from="/2018/04/01/when-does-easter-sunday-fall-on-april-fools-day/"
+  to="/blog/2018-05-04-winners-and-losers-in-the-city-of-durham-parish-council-election"
+
+[[redirects]]
+  from="/2018/02/08/female-composers-in-the-sacred-harp/"
+  to="/blog/2018-04-01-how-often-does-easter-sunday-fall-on-april-fools-day"
+
+[[redirects]]
+  from="/2018/01/22/new-website-durham-sacred-harp/"
+  to="/blog/2018-02-07-female-composers-in-the-sacred-harp"
+
+[[redirects]]
+  from="/2018/01/02/how-often-is-1st-january-a-monday/"
+  to="/blog/2018-01-02-how-often-is-1st-january-a-monday"
+
+[[redirects]]
+  from="/2017/08/16/a-simplistic-post-on-remembering-your-countrys-history/"
+  to="/blog/2017-08-16-a-simplistic-post-on-remembering-your-country-s-history"
+
+[[redirects]]
+  from="/2017/07/10/a-simplistic-post-on-quick-trade-agreements/"
+  to="/blog/2017-07-10-a-simplistic-post-on-quick-trade-agreements"
+
+[[redirects]]
+  from="/2017/06/18/a-simplistic-post-on-brexit-utopianism/"
+  to="/blog/2017-06-18-a-simplistic-post-on-brexit-utopianism"
+
+[[redirects]]
+  from="/2017/06/14/a-simplistic-post-on-liberalism-and-christianity/"
+  to="/blog/2017-06-15-a-simplistic-post-on-liberalism-and-christianity"
