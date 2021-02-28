@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { toPlainObject } from 'lodash'
 
 
 export default function themeToggleButton() {
     const [mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
+    const { resolvedTheme, setTheme } = useTheme()
     useEffect(() => setMounted(true), [])
-    if (!mounted) return (
-        <></>
-    )
+    if (!mounted) return null
 
-
-    if (theme === 'dark') {
+    if (resolvedTheme === 'dark') {
         return (
             <>
                 <button id="themeButton" className="text-white w-6 h-6 mt-2.5" aria-label='Switch to light theme' onClick={() => setTheme('light')}>
@@ -24,7 +22,7 @@ export default function themeToggleButton() {
         )
     }
 
-    else if (theme === 'light') {
+    else if (resolvedTheme === 'light') {
         return (
             <>
                 <button id="themeButton" className="w-6 h-6 mt-2.5" aria-label='Switch to dark theme' onClick={() => setTheme('dark')}>
@@ -33,6 +31,14 @@ export default function themeToggleButton() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                 </button>
+            </>
+        )
+    }
+
+    else {
+        return (
+            <>
+                <div className='w-6 h-6 mt-2.5' />
             </>
         )
     }
