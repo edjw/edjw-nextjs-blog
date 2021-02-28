@@ -60,7 +60,7 @@ export default function Pocket() {
                             <a href={`https://app.getpocket.com/read/${id}`}
                                 aria-label={`Read ${title ? title : 'article'}${authors
                                     && ' by '} ${authors && authors} on Pocket`}
-                                className="text-gray-500 text-opacity-90">
+                                className="text-gray-500">
                                 Read on Pocket
                             </a>
                         </p>
