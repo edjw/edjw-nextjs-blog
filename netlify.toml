@@ -13,3 +13,15 @@
 [[redirects]]
   from = "/all-posts/"
   to = "/blog/"
+
+[[redirects]]
+  from="/pocket-articles"
+  to="/reading-list/pocket-articles"
+
+[[redirects]]
+  from="/raindrop-links"
+  to="/reading-list/raindrop-links"
+
+[[redirects]]
+  from="/feedbin-stars"
+  to="/reading-list/feedbin-stars"
