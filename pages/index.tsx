@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import { GetStaticProps } from 'next'
 
 import Layout from '../components/Layout'
@@ -13,6 +14,9 @@ export default function Index({ featuredPosts, ...props }) {
   return (
     <>
       <Layout pageTitle={title} description={description}>
+        <Head>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        </Head>
 
         <section className='px-8 py-4 prose text-gray-900 border-t-4 border-yellow-200 bg-yellow-50 dark:bg-gray-800 dark:prose-light'>
           <p>
