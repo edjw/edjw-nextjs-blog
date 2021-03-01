@@ -32,7 +32,7 @@ export default function Raindrop() {
 export const getStaticProps: GetStaticProps = async (context) => {
     const queryClient = new QueryClient()
 
-    await queryClient.prefetchQuery('raindropData', () => fetchRaindropData())
+    await queryClient.prefetchQuery('raindropData', fetchRaindropData)
 
     return {
         props: {

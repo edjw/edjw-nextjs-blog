@@ -29,7 +29,7 @@ const fetchFeedbinData = async () => {
 
 const useFeedbinData = async () => {
 
-    return useQuery('feedbinData', () => fetchFeedbinData())
+    return useQuery('feedbinData', fetchFeedbinData)
 }
 
 export { useFeedbinData, fetchFeedbinData }

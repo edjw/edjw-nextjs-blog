@@ -39,8 +39,8 @@ export default function ReadingList() {
                     <Link href="/reading-list/pocket-articles"><a className='font-semibold'>Latest 3 Pocket articles</a></Link>
                 </h3>
 
-                {pocketData.map((item) => (
-                    <ReadingListEntry key={item.id} title={item.title} url={item.url} excerpt={item.excerpt} />
+                {pocketData.map(({ id, title, url, excerpt }) => (
+                    <ReadingListEntry key={id} title={title} url={url} excerpt={excerpt} />
                 ))}
 
 
@@ -97,9 +97,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     await queryClient.prefetchQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles))
 
-    await queryClient.prefetchQuery('raindropData', () => fetchRaindropData())
+    await queryClient.prefetchQuery('raindropData', fetchRaindropData)
 
-    await queryClient.prefetchQuery('feedbinData', () => fetchFeedbinData())
+    await queryClient.prefetchQuery('feedbinData', fetchFeedbinData)
 
     return {
         props: {

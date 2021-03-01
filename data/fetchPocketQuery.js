@@ -49,7 +49,7 @@ const fetchPocketData = async ({ queryKey }) => {
 
 const usePocketData = async () => {
 
-    return useQuery(['pocketData'], () => fetchPocketData())
+    return useQuery(['pocketData'], fetchPocketData)
 }
 
 export { usePocketData, fetchPocketData }

@@ -25,7 +25,7 @@ const fetchRaindropData = async () => {
 }
 
 const useRaindropData = async () => {
-    return useQuery('raindropData', () => fetchRaindropData())
+    return useQuery('raindropData', fetchRaindropData)
 }
 
 export { useRaindropData, fetchRaindropData }
