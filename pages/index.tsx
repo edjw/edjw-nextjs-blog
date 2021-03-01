@@ -18,6 +18,7 @@ export default function Index({ featuredPosts, ...props }) {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
           <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+          <link rel="microsub" href="https://aperture.p3k.io/microsub/134" />
         </Head>
 
         <section className='px-8 py-4 prose text-gray-900 border-t-4 border-yellow-200 bg-yellow-50 dark:bg-gray-800 dark:prose-light'>
