@@ -32,8 +32,6 @@ export default function Pocket() {
 
                 {pocketData.map(({ title, url, authors, excerpt, id, tags }) => (
 
-
-
                     <section key={id} className="rprose readingListItem dark:prose-light dark:bg-gray-800">
 
                         <p className='mb-0'>
