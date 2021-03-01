@@ -15,7 +15,6 @@ npm run dev
 ```
 
 todo
-- redirects
 - menu, never been happy with it. switch to <https://github.com/negomi/react-burger-menu> ?
 - switch to mdx?
 - auto generate social images with cloudinary

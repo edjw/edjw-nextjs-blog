@@ -1,26 +1,25 @@
 [
   {
     "text": "Blog",
-    "url": "/blog",
-    "section": "blog"
+    "url": "/blog"
   },
   {
     "text": "Reading",
-    "section": "reading-list",
     "url": "/reading-list"
   },
   {
     "text": "About ",
-    "url": "/about",
-    "section": "about"
+    "url": "/about"
   },
   {
     "text": "Twitter",
-    "url": "https://twitter.com/_edjw"
+    "url": "https://twitter.com/_edjw",
+    "attribute": "me"
   },
   {
     "text": "Github",
-    "url": "https://github.com/edjw"
+    "url": "https://github.com/edjw",
+    "attribute": "me"
   },
   {
     "text": "RSS",
