@@ -7,6 +7,9 @@ const { url: siteURL, title: siteTitle, description: siteDescription, author: { 
 
 import markdownToHtml from '../utils/md2HTML'
 
+export const config = {
+    unstable_runtimeJS: false,
+}
 
 const formatDate = (date) => {
     return DateTime.fromFormat(date, 'dd MMMM yyyy').toFormat("yyyy-LL-dd");

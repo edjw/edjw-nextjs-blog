@@ -8,6 +8,10 @@ import { GetStaticProps } from 'next'
 const title = 'Feedbin stars'
 const description = 'My starred articles in Feedbin'
 
+export const config = {
+    unstable_runtimeJS: false,
+}
+
 export default function Feedbin() {
     const { data: feedbinData } = useQuery(
         'feedbinData',

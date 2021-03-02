@@ -3,6 +3,10 @@ import Layout from '../components/Layout'
 
 const title = "Sorry, that page doesn't exist"
 
+export const config = {
+    unstable_runtimeJS: false,
+}
+
 export default function FourOhFour() {
     return (
         <>

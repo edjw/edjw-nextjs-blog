@@ -4,6 +4,10 @@ import getPage from '../utils/getPage'
 import pageMarkdown from '../static-pages/about.md'
 import { GetStaticProps } from 'next'
 
+export const config = {
+    unstable_runtimeJS: false,
+}
+
 export default function About({ title, description, content, ...props }) {
     return (
         <>

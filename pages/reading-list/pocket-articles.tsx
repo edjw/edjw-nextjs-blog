@@ -8,6 +8,10 @@ const numberOfArticles = 0 // 0 is unlimited
 const title = 'Pocket articles'
 const description = 'My saved Pocket articles'
 
+export const config = {
+    unstable_runtimeJS: false,
+}
+
 export default function Pocket() {
 
     const { data: pocketData } = useQuery(

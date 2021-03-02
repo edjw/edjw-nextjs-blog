@@ -6,6 +6,10 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 
 import allPosts from '../../data/allBlogposts'
 
+export const config = {
+    unstable_runtimeJS: false,
+}
+
 export default function TagPage({ tagName, tagPosts }) {
     return (
         <>
