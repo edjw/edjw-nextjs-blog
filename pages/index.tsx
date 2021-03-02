@@ -10,10 +10,6 @@ import allPosts from '../data/allBlogposts'
 const title = "Ed Johnson Williams' website"
 const description = "Ed Johnson Williams' website"
 
-export const config = {
-  unstable_runtimeJS: false,
-}
-
 export default function Index({ featuredPosts, ...props }) {
   return (
     <>
