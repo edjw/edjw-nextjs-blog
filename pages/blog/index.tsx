@@ -4,10 +4,6 @@ import { GetStaticProps } from 'next'
 
 import allPosts from '../../data/allBlogposts'
 
-export const config = {
-    unstable_runtimeJS: false,
-}
-
 export default function AllPosts({ allPosts, ...props }) {
     return (
         <>

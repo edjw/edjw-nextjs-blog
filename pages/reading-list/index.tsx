@@ -12,10 +12,6 @@ const numberOfArticles = 3
 const title = 'Reading List'
 const description = 'My saved Pocket articles, Raindrop links, and Feedbin stars'
 
-export const config = {
-    unstable_runtimeJS: false,
-}
-
 export default function ReadingList() {
 
     const { data: pocketData } = useQuery(['pocketData', numberOfArticles], (numberOfArticles) => fetchPocketData(numberOfArticles), { staleTime: Infinity })

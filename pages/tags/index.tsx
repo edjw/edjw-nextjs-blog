@@ -10,10 +10,6 @@ import allPosts from '../../data/allBlogposts'
 const title = 'Tags'
 const description = 'Tags from my blog posts'
 
-export const config = {
-    unstable_runtimeJS: false,
-}
-
 export default function Tags({ tags, ...props }) {
     return (
         <>

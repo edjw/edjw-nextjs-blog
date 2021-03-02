@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { toPlainObject } from 'lodash'
 
 
 export default function themeToggleButton() {

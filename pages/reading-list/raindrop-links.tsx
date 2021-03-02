@@ -8,10 +8,6 @@ import { GetStaticProps } from 'next'
 const title = 'Raindrop Links'
 const description = 'My saved articles in Raindrop'
 
-export const config = {
-    unstable_runtimeJS: false,
-}
-
 export default function Raindrop() {
     const { data: raindropData } = useQuery(
         'raindropData',

@@ -12,10 +12,6 @@ import allPosts from '../../data/allBlogposts'
 
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-export const config = {
-    unstable_runtimeJS: false,
-}
-
 export default function BlogPost({ title, date, tags, socialDescription, markdownBody, readingTime }) {
     if (!title) return <></>
 
